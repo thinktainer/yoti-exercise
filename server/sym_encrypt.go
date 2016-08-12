@@ -62,8 +62,8 @@ func decrypt(key, ciphertext []byte) (decrypted []byte, err error) {
 	return decrypted, nil
 }
 
-func hash(key []byte) (hashed []byte) {
+func hash(key string) string {
 	sha := sha256.New()
-	hashed = sha.Sum(key)
-	return hashed
+	hashed := sha.Sum([]byte(key))
+	return string(hashed)
 }
