@@ -6,7 +6,7 @@ import (
 	"testing"
 )
 
-func Test_CanEncryptAndDecryptOK(t *testing.T) {
+func TestServer_CanEncryptAndDecryptOK(t *testing.T) {
 
 	sampleMessage := "a sample message"
 	t.Logf("[Encrypting]: \"%s\"", sampleMessage)
@@ -32,7 +32,7 @@ func Test_CanEncryptAndDecryptOK(t *testing.T) {
 	t.Logf("[Generated Key]: %s", hex.EncodeToString(key))
 }
 
-func Test_StoreAddAndRetrieveReturnsExpectedKey(t *testing.T) {
+func TestStore_AddAndRetrieveReturnsExpectedKey(t *testing.T) {
 	st := kvStore
 	key, expected := "key", []byte("value")
 	st.add(key, expected)

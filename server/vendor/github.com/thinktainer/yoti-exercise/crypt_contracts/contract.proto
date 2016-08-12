@@ -8,19 +8,19 @@ service Crypt {
 
 message EncryptRequest {
 	 string id = 1;
-	 string value = 2;
+	 bytes value = 2;
 }
 
 message EncryptResponse {
 
-	string key = 1;
+	bytes key = 1;
 }
 
 message DecryptRequest {
-	 string key = 1;
+	 bytes key = 1;
 	 string id = 2;
 }
 
 message DecryptResponse {
-	string decrypted = 1;
+	bytes decrypted = 1;
 }
