@@ -28,7 +28,9 @@ func (s *server) Encrypt(ctx context.Context, req *c.EncryptRequest) (*c.Encrypt
 		return nil, grpc.Errorf(codes.Internal, grpc.ErrorDesc(err))
 	}
 
-	kvStore.add(hash(req.Id), encrypted)
+	if ok := kvStore.add(hash(req.Id), encrypted); !ok {
+		return nil, grpc.Errorf(codes.AlreadyExists, "Provided Id already exists")
+	}
 	return &c.EncryptResponse{
 		Key: key,
 	}, nil

@@ -1,0 +1,14 @@
+{
+	"comment": "",
+	"ignore": "",
+	"package": [
+		{
+			"checksumSHA1": "yx5uPB/rZimn6KAZ3nZi2jgKt1k=",
+			"origin": "github.com/thinktainer/yoti-exercise/client/vendor/github.com/thinktainer/yoti-exercise/crypt_contracts",
+			"path": "github.com/thinktainer/yoti-exercise/crypt_contracts",
+			"revision": "ba6072d7140ef4988c84540acb774aac507680a9",
+			"revisionTime": "2016-08-12T10:58:15Z"
+		}
+	],
+	"rootPath": "github.com/thinktainer/yoti-exercise/client"
+}
